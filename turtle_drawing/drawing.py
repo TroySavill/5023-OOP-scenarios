@@ -4,7 +4,6 @@ class Shape:
         self.points = points
         self.my_turtle = my_turtle
     
-   
     def draw(self):  
         self.my_turtle.penup()
         self.my_turtle.goto((self.points[0].x,self.points[0].y))
@@ -19,6 +18,4 @@ class Shape:
 class Point:
     def __init__(self, x:float, y:float):
         self.x = x
-        self.y = y
-        
-    
+        self.y = y   
