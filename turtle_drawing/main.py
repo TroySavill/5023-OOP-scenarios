@@ -35,8 +35,8 @@ shapes = []
 # Creates an instance of a turtle which will be used for drawing the shapes
 my_turtle = turtle.Turtle()
 
-b_triangle_points = [drawing.Point(-120, 200),drawing.Point(-20, 200), drawing.Point(-70, 100)]
-blue_triangle = [drawing.Shape('blue', b_triangle_points, my_turtle)
+b_triangle_points = [ drawing.Point(-120, 200), drawing.Point(-20, 200), drawing.Point(-70, 100) ]
+blue_triangle = drawing.Shape('blue', b_triangle_points, my_turtle)
 shapes.append(blue_triangle)
 
 square = [drawing.Point(-200, -100), drawing.Point(-200, -150), drawing.Point(-150, -150), drawing.Point(-150, -100)]
@@ -44,13 +44,15 @@ orange_square = drawing.Shape('orange', square, my_turtle)
 shapes.append(orange_square)
 
 r_triangle_points = [drawing.Point(100, 200),drawing.Point(250, 200), drawing.Point(175, 50)]
-blue_triangle = [drawing.Shape('red', r_triangle_points, my_turtle)
-rt_points = [(100, 200), (250, 200), (175, 50)]
+red_triangle = drawing.Shape('red', r_triangle_points, my_turtle)
 shapes.append(red_triangle)
+
+hexagon = [drawing.Point(50, -87),drawing.Point(-50, -87), drawing.Point(-100, 0),drawing.Point(-50, 87),drawing.Point(50, 87), drawing.Point(100, 0)]
+green_hexagon = drawing.Shape('green', hexagon, my_turtle)
+shapes.append(green_hexagon)
 
 # Draws all of the shapes that are in the list in the window
 for shape in shapes:
-    # TODO: Modify the next line to use the draw method on the Shape object
     shape.draw()
     
 # This line will mean that the Turtle window won't close until we click
