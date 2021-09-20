@@ -12,20 +12,18 @@ def create_rectangle():
     length = float(input('Rectangle length: '))
     width = float(input('Rectangle width: '))
 
-    # Creates a dictionary for the rectangle
+
     # TODO: Should be replaced with the creation of a Rectangle object
-    rectangle = {}
-    rectangle['length'] = length
-    rectangle['width'] = width
+    rectangle = shapes.Rectangle(length, width)
 
     # Calculates the area for the rectangle and prints this rounded to 2 decimal places
     # TODO: Replace the next line with a call to the Rectangle's calculate_area() method
-    area = rectangle['length'] * rectangle['width']
+    area = rectangle.calculate_area()
     print(f'Rectangle area: {round(area, 2)}')
-
+    print()
     # Calculates the perimeter for the rectangle and prints this rounded to 2 decimal places
     # TODO: Replace the next line with a call to the Rectangle's calculate_perimeter() method
-    perimeter = 2 * rectangle['length'] + 2 * rectangle['width']
+    perimeter = rectangle.calculate_perimeter()
     print(f'Rectangle perimeter: {round(perimeter, 2)}')
     print()
 
@@ -39,19 +37,17 @@ def create_circle():
     print()
     radius = float(input('Circle radius: '))
 
-    # Creates a dictionary for the circle
     # TODO: Should be replaced with the creation of a Circle object
-    circle = {}
-    circle['radius'] = radius
+    circle = shapes.Circle(radius)
 
     # Calculates the area for the circle and prints this rounded to 2 decimal places
     # TODO: Replace the next line with a call to the Circle's calculate_area() method
-    area = (circle['radius'] * circle['radius']) * math.pi 
+    area = circle.calculate_area() 
     print(f'Circle area: {round(area,2)}')
 
     # Calclates the circumference for the circle and prints this rounded to 2 decimal places
     # TODO: Replace the next line with a call to the Circle's calculate_circumference() method
-    circumference = 2 * circle['radius'] * math.pi
+    circumference = circle.calculate_circumference()
     print(f'Circle circumference: {round(circumference, 2)}')
     print()
 
